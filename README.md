@@ -1,10 +1,14 @@
-Starter Template:
-https://github.com/polidario/Elizabeth_Clean
+## MedxMan Custom Theme
+This repo will be used to learn more about Shopify Theme Development + creating a starter theme to be used for future projects.
 
-tailwind Installation:
-https://tailwindcss.com/docs/installation
 
-## Commands
+**Important Content**
++ Starter Project: [Elizabeth_Clean](https://github.com/polidario/Elizabeth_Clean)
++ Tailwind: [Installation](https://tailwindcss.com/docs/installation)
++ Sample Schema: [Shopify Docs](https://shopify.dev/docs/themes/architecture/sections/section-schema)
++ Free Icons: [HeroIcons](https://heroicons.com/)
+
+#### Commands
 
 ```
 npm run dev
@@ -19,39 +23,3 @@ shopify theme dev --store=theme-testing-medxman.myshopify.com
 ```
 npx tailwindcss -i ./src/tailwind.css -o ./dist/output.css --watch
 ```
-
-## Sample Schema
-
-```
-{% schema %}
-{
-  "name": "Slideshow",
-  "tag": "section",
-  "class": "slideshow",
-  "limit": 1,
-  "settings": [
-    {
-      "type": "text",
-      "id": "title",
-      "label": "Slideshow"
-    }
-  ],
-  "max_blocks": 5,
-  "blocks": [
-     {
-       "name": "Slide",
-       "type": "slide",
-       "settings": [
-         {
-           "type": "image_picker",
-           "id": "image",
-           "label": "Image"
-         }
-       ]
-     }
-  ],
-  "presets": []
-}
-{% endschema %}
-```
-# custom-blank-theme
