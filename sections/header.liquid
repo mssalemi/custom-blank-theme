@@ -1,4 +1,5 @@
 {% assign main_menu = linklists[section.settings.menu].links %}
+{% assign accounts_enabled = shop.customer_accounts_enabled %}
 
   <div class="relative bg-white" x-data="{ mobileMenuOpen: false }">
   <div class="mx-auto px-4 sm:px-6">
@@ -70,7 +71,7 @@
             {% render 'icon-shopping-bag' %}
           </a>
         {% endif %}
-        {% if section.settings.show_account %}
+        {% if section.settings.show_account and accounts_enabled %}
           <a href={{routes.account_login_url}} class="text-base text-gray-500 hover:text-gray-900">Login</a>
           <a href={{routes.account_register_url}} class="text-base text-gray-500 hover:text-gray-900">Register</a>
         {% endif %}
@@ -151,6 +152,7 @@
         "type": "checkbox",
         "id": "show_account",
         "label": "Show account",
+        "info": "Requires the Customer Accounts to be enabled in your settings.",
         "default": true
       }, {
         "type": "link_list",
